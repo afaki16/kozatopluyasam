@@ -1,7 +1,6 @@
 <template>
   <section id="iletisim" class="cta">
 
-    <!-- Arka plan -->
     <div class="bg">
       <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80" alt="" />
       <div class="bg-overlay" />
@@ -9,109 +8,59 @@
 
     <div class="container">
 
-      <!-- Sol: Başlık + iletişim -->
-      <div class="left">
+      <!-- Üst: başlık bloğu -->
+      <div class="top">
         <div class="badge">
           <span class="badge-dot" />
-          Yıl Sonu Kampanyası Aktif
+          Ücretsiz Keşif &amp; Fiyat Teklifi
         </div>
-
-        <h2>Kampanyalı fiyatlar için<br><em>hemen arayın</em></h2>
-        <p>Yıl sonuna kadar sürecek özel fiyatlarımızdan yararlanın. Ücretsiz keşif ve fiyat teklifi için bizi arayın.</p>
-
-        <div class="contact-items">
-          <a href="tel:05302264033" class="contact-item">
-            <div class="contact-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.88 1.18 2 2 0 012.86 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/>
-              </svg>
-            </div>
-            <div class="contact-text">
-              <span>Telefon</span>
-              <strong>0530 226 40 33</strong>
-            </div>
-            <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
-          </a>
-
-          <a href="mailto:info@kozatopluyasam.com.tr" class="contact-item">
-            <div class="contact-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                <polyline points="22,6 12,13 2,6"/>
-              </svg>
-            </div>
-            <div class="contact-text">
-              <span>E-posta</span>
-              <strong>info@kozatopluyasam.com.tr</strong>
-            </div>
-            <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
-          </a>
-
-          <a href="https://www.kozatopluyasam.com.tr" target="_blank" class="contact-item">
-            <div class="contact-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <circle cx="12" cy="12" r="10"/>
-                <path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/>
-              </svg>
-            </div>
-            <div class="contact-text">
-              <span>Website</span>
-              <strong>kozatopluyasam.com.tr</strong>
-            </div>
-            <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
-          </a>
-        </div>
+        <h2>Profesyonel yönetim için<br><em>bizimle iletişime geçin</em></h2>
+        <p>Bursa'da site ve apartman yönetiminde uzman ekibimiz her sorunuza yanıt vermeye hazır.</p>
       </div>
 
-      <!-- Sağ: İletişim kartı -->
-      <div class="card">
-        <div class="card-header">
-          <div class="pulse-ring">
-            <div class="pulse-dot" />
-          </div>
-          <div>
-            <p class="card-label">Ücretsiz keşif ve teklif için</p>
-            <div class="phone-num">0530 226 40 33</div>
-          </div>
-        </div>
-
-        <div class="divider" />
-
-        <div class="card-actions">
-          <a href="tel:05302264033" class="btn-call">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <!-- Orta: iletişim bilgileri -->
+      <div class="contacts">
+        <a href="tel:05302264033" class="contact-card">
+          <div class="cc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
               <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.88 1.18 2 2 0 012.86 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/>
             </svg>
-            Hemen Ara
-          </a>
-          <a href="mailto:info@kozatopluyasam.com.tr" class="btn-mail">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          </div>
+          <div class="cc-text">
+            <span>Telefon</span>
+            <strong>0530 226 40 33</strong>
+          </div>
+        </a>
+
+        <a href="mailto:info@kozatopluyasam.com.tr" class="contact-card">
+          <div class="cc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
               <polyline points="22,6 12,13 2,6"/>
             </svg>
-            E-posta Gönder
-          </a>
-        </div>
+          </div>
+          <div class="cc-text">
+            <span>E-posta</span>
+            <strong>info@kozatopluyasam.com.tr</strong>
+          </div>
+        </a>
 
-        <div class="divider" />
-
-        <div class="card-footer">
-          <div class="location">
+        <div class="contact-card static">
+          <div class="cc-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
               <circle cx="12" cy="10" r="3"/>
             </svg>
-            Bursa / Türkiye
           </div>
-          <div class="hours">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <circle cx="12" cy="12" r="10"/>
-              <polyline points="12 6 12 12 16 14"/>
-            </svg>
-            Pzt–Cum 08:00–18:00
+          <div class="cc-text">
+            <span>Konum</span>
+            <strong>Bursa / Türkiye</strong>
           </div>
         </div>
       </div>
+
+      <!-- Alt: aksiyon butonları -->
+     
 
     </div>
   </section>
@@ -120,7 +69,7 @@
 <style scoped>
 .cta {
   position: relative;
-  padding: 100px 24px;
+  padding: 110px 24px;
   overflow: hidden;
 }
 
@@ -134,16 +83,16 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 60%;
+  object-position: center 50%;
 }
 .bg-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    120deg,
-    rgba(8, 38, 28, 0.95) 0%,
-    rgba(13, 74, 53, 0.90) 50%,
-    rgba(8, 38, 28, 0.95) 100%
+    160deg,
+    rgba(5, 25, 18, 0.97) 0%,
+    rgba(13, 74, 53, 0.88) 50%,
+    rgba(5, 25, 18, 0.97) 100%
   );
 }
 
@@ -151,237 +100,157 @@
 .container {
   position: relative;
   z-index: 1;
-  max-width: 1100px;
+  max-width: 860px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 72px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  gap: 52px;
+  text-align: center;
 }
 
-/* SOL */
+/* ÜST BAŞLIK */
+.top { display: flex; flex-direction: column; align-items: center; }
+
 .badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(125, 224, 184, 0.15);
-  border: 1px solid rgba(125, 224, 184, 0.3);
+  background: rgba(125, 224, 184, 0.12);
+  border: 1px solid rgba(125, 224, 184, 0.28);
   color: #7de0b8;
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.5px;
-  padding: 6px 14px;
+  letter-spacing: 0.8px;
+  padding: 6px 16px;
   border-radius: 20px;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 .badge-dot {
-  width: 7px;
-  height: 7px;
+  width: 6px;
+  height: 6px;
   background: #7de0b8;
   border-radius: 50%;
-  animation: pulse-badge 1.8s infinite;
+  animation: pulse-dot 1.8s infinite;
 }
-@keyframes pulse-badge {
+@keyframes pulse-dot {
   0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.5; transform: scale(0.7); }
+  50% { opacity: 0.4; transform: scale(0.65); }
 }
 
 h2 {
-  font-size: 38px;
+  font-size: 42px;
   font-weight: 900;
   color: #fff;
-  line-height: 1.15;
-  margin-bottom: 16px;
-  letter-spacing: -0.3px;
+  line-height: 1.12;
+  margin-bottom: 18px;
+  letter-spacing: -0.5px;
 }
 h2 em {
   font-style: italic;
   color: #7de0b8;
 }
-
-.left > p {
-  font-size: 15px;
-  color: rgba(255,255,255,0.55);
+.top > p {
+  font-size: 16px;
+  color: rgba(255,255,255,0.5);
   line-height: 1.75;
-  margin-bottom: 40px;
-  max-width: 400px;
+  max-width: 520px;
 }
 
-/* CONTACT ITEMS */
-.contact-items {
+/* İLETİŞİM KARTLARI */
+.contacts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  width: 100%;
+}
+
+.contact-card {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-}
-.contact-item {
-  display: flex;
   align-items: center;
   gap: 14px;
-  padding: 14px 16px;
+  padding: 28px 20px;
   background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 16px;
   text-decoration: none;
-  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+  transition: background 0.25s, border-color 0.25s, transform 0.25s;
 }
-.contact-item:hover {
+a.contact-card:hover {
   background: rgba(255,255,255,0.1);
   border-color: rgba(125,224,184,0.3);
-  transform: translateX(4px);
+  transform: translateY(-4px);
 }
-.contact-icon {
-  width: 40px;
-  height: 40px;
+.contact-card.static { cursor: default; }
+
+.cc-icon {
+  width: 48px;
+  height: 48px;
   background: rgba(125,224,184,0.12);
-  border-radius: 10px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #7de0b8;
   flex-shrink: 0;
 }
-.contact-icon svg { width: 17px; height: 17px; }
-.contact-text {
-  flex: 1;
+.cc-icon svg { width: 20px; height: 20px; }
+
+.cc-text {
   display: flex;
   flex-direction: column;
-  gap: 1px;
+  align-items: center;
+  gap: 4px;
 }
-.contact-text span {
+.cc-text span {
   font-size: 10px;
   color: rgba(255,255,255,0.35);
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
   font-weight: 600;
 }
-.contact-text strong {
+.cc-text strong {
   font-size: 14px;
   color: #fff;
   font-weight: 600;
-}
-.arrow {
-  width: 14px;
-  height: 14px;
-  stroke: rgba(255,255,255,0.3);
-  flex-shrink: 0;
+  text-align: center;
+  line-height: 1.3;
 }
 
-/* SAĞ: KART */
-.card {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 20px;
-  padding: 36px 32px;
-  backdrop-filter: blur(20px);
+/* AKSİYON BUTONLARI */
+.actions {
+  display: flex;
+  gap: 12px;
 }
-
-.card-header {
+.btn-primary, .btn-secondary {
   display: flex;
   align-items: center;
-  gap: 18px;
-  margin-bottom: 28px;
-}
-.pulse-ring {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: rgba(23,122,94,0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  flex-shrink: 0;
-  animation: ring-pulse 2.5s infinite;
-}
-@keyframes ring-pulse {
-  0%   { box-shadow: 0 0 0 0 rgba(125,224,184,0.4); }
-  70%  { box-shadow: 0 0 0 14px rgba(125,224,184,0); }
-  100% { box-shadow: 0 0 0 0 rgba(125,224,184,0); }
-}
-.pulse-dot {
-  width: 20px;
-  height: 20px;
-  background: #177a5e;
-  border-radius: 50%;
-  border: 3px solid #7de0b8;
-}
-.card-label {
-  font-size: 11px;
-  color: rgba(255,255,255,0.4);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 4px;
-  font-weight: 600;
-}
-.phone-num {
-  font-size: 26px;
-  font-weight: 900;
-  color: #fff;
-  letter-spacing: -0.5px;
-  line-height: 1;
-}
-
-.divider {
-  height: 1px;
-  background: rgba(255,255,255,0.1);
-  margin: 24px 0;
-}
-
-.card-actions {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.btn-call, .btn-mail {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 9px;
-  padding: 14px;
+  padding: 15px 32px;
   border-radius: 10px;
   font-size: 14px;
   font-weight: 700;
   text-decoration: none;
   transition: all 0.2s;
 }
-.btn-call svg, .btn-mail svg { width: 16px; height: 16px; flex-shrink: 0; }
-.btn-call {
+.btn-primary svg, .btn-secondary svg { width: 16px; height: 16px; flex-shrink: 0; }
+.btn-primary {
   background: #177a5e;
   color: #fff;
 }
-.btn-call:hover { background: #1e9470; transform: translateY(-1px); }
-.btn-mail {
-  background: rgba(255,255,255,0.08);
+.btn-primary:hover { background: #1e9470; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(23,122,94,0.4); }
+.btn-secondary {
+  background: rgba(255,255,255,0.07);
   color: rgba(255,255,255,0.85);
-  border: 1px solid rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.14);
 }
-.btn-mail:hover {
-  background: rgba(255,255,255,0.14);
-  color: #fff;
-}
+.btn-secondary:hover { background: rgba(255,255,255,0.13); color: #fff; transform: translateY(-2px); }
 
-.card-footer {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.location, .hours {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  font-size: 12.5px;
-  color: rgba(255,255,255,0.4);
-}
-.location svg, .hours svg {
-  width: 14px;
-  height: 14px;
-  stroke: rgba(255,255,255,0.3);
-  flex-shrink: 0;
-}
-
-@media (max-width: 900px) {
-  .container { grid-template-columns: 1fr; gap: 48px; }
-  h2 { font-size: 30px; }
-  .phone-num { font-size: 22px; }
+@media (max-width: 720px) {
+  .contacts { grid-template-columns: 1fr; }
+  h2 { font-size: 28px; }
+  .actions { flex-direction: column; width: 100%; }
+  .btn-primary, .btn-secondary { justify-content: center; }
 }
 </style>

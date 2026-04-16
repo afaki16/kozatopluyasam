@@ -14,6 +14,8 @@
       </div>
     </div>
 
+   
+
     <div class="slider-arrows">
       <button class="arrow-btn" @click="goTo(current - 1)">
         <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
@@ -255,10 +257,66 @@ p {
 }
 
 
+/* ── HERO SEAL ── */
+.hero-seal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -58%);
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  pointer-events: none;
+  animation: seal-in 1.2s ease both;
+}
+@keyframes seal-in {
+  from { opacity: 0; transform: translate(-50%, -62%) scale(0.92); }
+  to   { opacity: 1; transform: translate(-50%, -58%) scale(1); }
+}
+.seal-img {
+  height: 150px;
+  width: auto;
+  filter: drop-shadow(0 6px 32px rgba(0,0,0,0.35)) brightness(1.08);
+  margin-bottom: 50px;
+}
+.seal-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+.seal-text strong {
+  font-size: 30px;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: 6px;
+  line-height: 1;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.4);
+}
+.seal-text span {
+  font-size: 11px;
+  color: #7de0b8;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.seal-text em {
+  font-size: 10px;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-style: normal;
+  margin-top: 2px;
+}
+
 @media (max-width: 768px) {
   .slide-content { padding: 0 24px 80px; }
   .slider-arrows { left: 24px; }
   .slider-dots { right: 24px; }
   h1 { font-size: clamp(32px, 8vw, 52px); }
+  .seal-img { height: 80px; }
+  .seal-text strong { font-size: 22px; letter-spacing: 4px; }
 }
 </style>

@@ -3,7 +3,7 @@
     <div class="container">
       <div class="brand">
         <div class="logo">
-          <div class="logo-hex"><div class="logo-inner" /></div>
+          <img src="/logo.png" alt="Koza Toplu Yaşam" class="logo-img" />
           <div class="logo-text">
             <strong>KOZA</strong>
             <span>Toplu Yaşam</span>
@@ -69,20 +69,11 @@ const year = new Date().getFullYear()
   gap: 10px;
   margin-bottom: 16px;
 }
-.logo-hex {
-  width: 36px;
-  height: 36px;
-  background: #1e9470;
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.logo-inner {
-  width: 18px;
-  height: 18px;
-  background: #fff;
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+.logo-img {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(1.1);
 }
 .logo-text strong {
   font-size: 14px;
