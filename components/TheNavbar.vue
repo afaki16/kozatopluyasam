@@ -11,10 +11,10 @@
       </a>
 
       <ul class="nav-links">
-        <li><a href="#hizmetler">Hizmetler</a></li>
-        <li><a href="#neden-biz">Neden Biz?</a></li>
-        <li><a href="#dahil">Dahil Hizmetler</a></li>
-        <li><a href="#iletisim">İletişim</a></li>
+        <li><a href="#hizmetler">Hizmetlerimiz</a></li>
+        <li><a href="#neden-biz">Neden Koza?</a></li>
+        <li><a href="#dahil">Paket İçeriği</a></li>
+        <li><a href="#iletisim">Bize Ulaşın</a></li>
       </ul>
 
       <div class="nav-right">
@@ -31,10 +31,10 @@
     </div>
 
     <div class="mobile-menu" :class="{ open: menuOpen }">
-      <a href="#hizmetler" @click="menuOpen = false">Hizmetler</a>
-      <a href="#neden-biz" @click="menuOpen = false">Neden Biz?</a>
-      <a href="#dahil" @click="menuOpen = false">Dahil Hizmetler</a>
-      <a href="#iletisim" @click="menuOpen = false">İletişim</a>
+      <a href="#hizmetler" @click="menuOpen = false">Hizmetlerimiz</a>
+      <a href="#neden-biz" @click="menuOpen = false">Neden Koza?</a>
+      <a href="#dahil" @click="menuOpen = false">Paket İçeriği</a>
+      <a href="#iletisim" @click="menuOpen = false">Bize Ulaşın</a>
     </div>
   </nav>
 </template>

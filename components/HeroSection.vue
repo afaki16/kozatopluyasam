@@ -33,9 +33,6 @@
       />
     </div>
 
-    <div class="progress-bar">
-      <div class="progress-fill" :style="{ width: progress + '%' }" />
-    </div>
   </section>
 </template>
 
@@ -62,46 +59,26 @@ const slides = [
 ]
 
 const current = ref(0)
-const progress = ref(0)
-let rafId = null
-let paused = false
-const DURATION = 5000
+let timer = null
 
 function goTo(idx) {
   current.value = ((idx % slides.length) + slides.length) % slides.length
-  resetProgress()
+  restartTimer()
 }
 
-function resetProgress() {
-  progress.value = 0
-  if (rafId) cancelAnimationFrame(rafId)
-  startProgress()
-}
-
-function startProgress() {
-  let start = null
-  function step(ts) {
-    if (!start) start = ts
-    if (!paused) {
-      progress.value = Math.min(((ts - start) / DURATION) * 100, 100)
-    } else {
-      start = ts - (progress.value / 100) * DURATION
-    }
-    if (progress.value < 100) {
-      rafId = requestAnimationFrame(step)
-    } else {
-      goTo(current.value + 1)
-    }
-  }
-  rafId = requestAnimationFrame(step)
+function restartTimer() {
+  clearInterval(timer)
+  timer = setInterval(() => {
+    current.value = (current.value + 1) % slides.length
+  }, 2500)
 }
 
 onMounted(() => {
-  startProgress()
+  restartTimer()
 })
 
 onUnmounted(() => {
-  if (rafId) cancelAnimationFrame(rafId)
+  clearInterval(timer)
 })
 </script>
 
@@ -277,20 +254,6 @@ p {
   transform: scale(1.5);
 }
 
-.progress-bar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: rgba(255,255,255,0.12);
-  z-index: 10;
-}
-.progress-fill {
-  height: 100%;
-  background: #3a9147;
-  transition: width 0.1s linear;
-}
 
 @media (max-width: 768px) {
   .slide-content { padding: 0 24px 80px; }
