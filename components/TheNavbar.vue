@@ -28,12 +28,12 @@
   </nav>
 
   <Teleport to="body">
-    <div v-if="menuOpen" class="mo" @click.self="menuOpen = false">
+    <div class="mo" :class="{ open: menuOpen }" @click.self="close">
       <div class="mo-panel">
 
         <div class="mo-head">
           <img src="/logo.png" class="mo-logo" alt="" />
-          <button class="mo-x" @click="menuOpen = false">
+          <button type="button" class="mo-x" @click="close">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
               <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
             </svg>
@@ -41,12 +41,11 @@
         </div>
 
         <nav class="mo-nav">
-          <a href="#hizmetler" @click="menuOpen = false"><span>01</span>Hizmetlerimiz</a>
-          <a href="#neden-biz"  @click="menuOpen = false"><span>02</span>Neden Koza?</a>
-          <a href="#dahil"      @click="menuOpen = false"><span>03</span>Paket İçeriği</a>
-          <a href="#iletisim"   @click="menuOpen = false"><span>04</span>Bize Ulaşın</a>
+          <a href="#hizmetler" @click="close"><span>01</span>Hizmetlerimiz</a>
+          <a href="#neden-biz"  @click="close"><span>02</span>Neden Koza?</a>
+          <a href="#dahil"      @click="close"><span>03</span>Paket İçeriği</a>
+          <a href="#iletisim"   @click="close"><span>04</span>Bize Ulaşın</a>
         </nav>
-
 
       </div>
     </div>
@@ -56,6 +55,10 @@
 <script setup>
 const isScrolled = ref(false)
 const menuOpen = ref(false)
+
+function close() {
+  menuOpen.value = false
+}
 
 onMounted(() => {
   window.addEventListener('scroll', () => {
@@ -131,6 +134,13 @@ onMounted(() => {
   inset: 0;
   z-index: 9999;
   background: rgba(0,0,0,0.5);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.mo.open {
+  pointer-events: auto;
+  opacity: 1;
 }
 .mo-panel {
   position: absolute;
