@@ -1,58 +1,38 @@
-<script setup lang="ts">
-import { onMounted, nextTick } from 'vue'
-import {
-  slides,
-  stats,
-  services,
-  processSteps,
-  team,
-  testimonials
-} from '../data/landing'
-import { useHead } from 'nuxt/app'
+<template>
+  <div>
+    <TheNavbar />
+    <main>
+      <HeroSection />
+     
+      <ServicesSection />
+     
+       <IncludedSection />
+       <WhyUsSection />
+     
+      <CtaSection />
+    </main>
+    <TheFooter />
+  </div>
+</template>
 
-useHead({
-  title: 'Koza Toplu Yaşam — Bursa Site & Bina Yönetimi',
-  link: [
-    { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-    { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
-    {
-      rel: 'stylesheet',
-      href: 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap'
-    }
-  ]
-})
-
-onMounted(async () => {
-  await nextTick()
-
-  const revealEls = document.querySelectorAll('.reveal')
-
-  const obs = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible')
-        }
-      })
-    },
-    { threshold: 0.1 }
-  )
-
-  revealEls.forEach((el) => obs.observe(el))
+<script setup>
+useSeoMeta({
+  title: 'Koza Toplu Yaşam – Profesyonel Site ve Apartman Yönetimi',
+  description:
+    'Bursa\'da profesyonel bina, site ve apartman yönetimi. Yönetim, temizlik, güvenlik ve ortak alanlarla ilgili tüm takipleri bize bırakın.',
+  ogTitle: 'Koza Toplu Yaşam – Profesyonel Site ve Apartman Yönetimi',
+  ogDescription:
+    'Bursa\'da profesyonel bina, site ve apartman yönetimi hizmetleri. Siz rahat edin.',
 })
 </script>
 
-<template>
-  <div>
-    <LandingNavbar />
-    <LandingHeroSlider :items="slides" />
-    <LandingStatsBar :items="stats" />
-    <LandingAboutSection />
-    <LandingServicesSection :items="services" />
-    <LandingProcessSection :items="processSteps" />
-    <LandingTeamSection :items="team" />
-    <LandingTestimonialsSection :items="testimonials" />
-    <LandingCtaBanner />
-    <LandingSiteFooter />
-  </div>
-</template>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: #fff;
+  color: #1a1a1a;
+  -webkit-font-smoothing: antialiased;
+}
+</style>
