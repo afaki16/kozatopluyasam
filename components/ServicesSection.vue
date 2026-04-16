@@ -11,8 +11,6 @@
       <div class="grid">
         <div v-for="(s, i) in services" :key="s.title" class="card">
 
-          <div class="card-fill" />
-
           <div class="card-top">
             <div class="card-icon" v-html="s.icon" />
             <span class="card-num">{{ String(i + 1).padStart(2, '0') }}</span>
@@ -148,32 +146,12 @@ h2 span { color: #177a5e; }
   position: relative;
   border-radius: 18px;
   padding: 26px 22px 24px;
-  background: #fff;
-  border: 1px solid #dceee7;
+  background: linear-gradient(145deg, #0d4a35 0%, #177a5e 100%);
+  border: 1px solid transparent;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   cursor: default;
-  transition: border-color 0.4s, box-shadow 0.4s, transform 0.4s;
-}
-.card:hover {
-  border-color: transparent;
-  box-shadow: 0 24px 56px rgba(13, 74, 53, 0.18);
-  transform: translateY(-5px);
-}
-
-/* Fill: aşağıdan yukarı */
-.card-fill {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(145deg, #0d4a35 0%, #177a5e 100%);
-  transform: translateY(100%);
-  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 0;
-  border-radius: 18px;
-}
-.card:hover .card-fill {
-  transform: translateY(0);
 }
 
 /* ── TOP: ikon + numara ── */
@@ -188,19 +166,13 @@ h2 span { color: #177a5e; }
 .card-icon {
   width: 44px;
   height: 44px;
-  background: #e4f5ee;
+  background: rgba(255,255,255,0.15);
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #177a5e;
-  flex-shrink: 0;
-  transition: background 0.4s, color 0.4s, transform 0.4s;
-}
-.card:hover .card-icon {
-  background: rgba(255,255,255,0.15);
   color: #7de0b8;
-  transform: scale(1.1) rotate(-5deg);
+  flex-shrink: 0;
 }
 .card-icon :deep(svg) { width: 20px; height: 20px; }
 
@@ -209,12 +181,8 @@ h2 span { color: #177a5e; }
   font-weight: 900;
   line-height: 1;
   letter-spacing: -2px;
-  color: #eaf3ef;
-  user-select: none;
-  transition: color 0.4s;
-}
-.card:hover .card-num {
   color: rgba(255,255,255,0.15);
+  user-select: none;
 }
 
 /* ── BODY: her zaman görünür, renk hover'da değişir ── */
@@ -228,24 +196,16 @@ h2 span { color: #177a5e; }
 .card-body h3 {
   font-size: 14px;
   font-weight: 700;
-  color: #0d4a35;
+  color: #fff;
   margin-bottom: 8px;
   line-height: 1.3;
-  transition: color 0.3s;
-}
-.card:hover .card-body h3 {
-  color: #fff;
 }
 .card-body p {
   font-size: 11.5px;
-  color: #8aaa9f;
+  color: rgba(255,255,255,0.65);
   line-height: 1.65;
   margin-bottom: 14px;
   flex: 1;
-  transition: color 0.3s;
-}
-.card:hover .card-body p {
-  color: rgba(255,255,255,0.65);
 }
 
 /* ── TAGS ── */
@@ -258,17 +218,11 @@ h2 span { color: #177a5e; }
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.2px;
-  color: #1e9470;
-  background: #e8f5ef;
-  border: 1px solid #c8e8d8;
-  padding: 3px 9px;
-  border-radius: 20px;
-  transition: color 0.3s, background 0.3s, border-color 0.3s;
-}
-.card:hover .tags span {
   color: #7de0b8;
   background: rgba(125,224,184,0.12);
-  border-color: rgba(125,224,184,0.28);
+  border: 1px solid rgba(125,224,184,0.28);
+  padding: 3px 9px;
+  border-radius: 20px;
 }
 
 /* ── RESPONSIVE ── */
