@@ -4,10 +4,6 @@
       <div class="brand">
         <div class="logo">
           <img src="/logo.png" alt="Koza Toplu Yaşam" class="logo-img" />
-          <div class="logo-text">
-            <strong>KOZA</strong>
-            <span>Toplu Yaşam</span>
-          </div>
         </div>
         <p>Profesyonel bina, site ve apartman yöneticiliğinde doğru adres.</p>
       </div>
@@ -70,24 +66,10 @@ const year = new Date().getFullYear()
   margin-bottom: 16px;
 }
 .logo-img {
-  height: 52px;
+  height: 90px;
   width: auto;
   object-fit: contain;
   filter: brightness(1.1);
-}
-.logo-text strong {
-  font-size: 14px;
-  font-weight: 800;
-  color: #fff;
-  display: block;
-  letter-spacing: 0.5px;
-  line-height: 1.1;
-}
-.logo-text span {
-  font-size: 10px;
-  color: #3aad82;
-  letter-spacing: 1px;
-  text-transform: uppercase;
 }
 .brand > p {
   font-size: 13px;

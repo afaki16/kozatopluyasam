@@ -176,11 +176,11 @@ onMounted(() => {
 .mo-btn:hover { background: #1e9470; }
 
 @media (max-width: 900px) {
-  .container { padding: 0 20px; height: 80px; gap: 0; justify-content: space-between; }
+  .container { padding: 0 24px; height: 90px; gap: 0; justify-content: space-between; }
   .nav-links { display: none; }
   .nav-right { display: none; }
   .menu-toggle { display: flex; }
-.logo-img { height: 64px; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3)); }
-  .navbar.scrolled .logo-img { height: 54px; filter: none; }
+  .logo-img { height: 82px; filter: drop-shadow(0 2px 10px rgba(0,0,0,0.32)); }
+  .navbar.scrolled .logo-img { height: 74px; filter: drop-shadow(0 1px 6px rgba(0,0,0,0.15)); }
 }
 </style>

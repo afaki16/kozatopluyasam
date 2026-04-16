@@ -72,7 +72,7 @@ function restartTimer() {
   clearInterval(timer)
   timer = setInterval(() => {
     current.value = (current.value + 1) % slides.length
-  }, 2500)
+  }, 4000)
 }
 
 onMounted(() => {
