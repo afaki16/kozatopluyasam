@@ -47,13 +47,6 @@
           <a href="#iletisim"   @click="menuOpen = false"><span>04</span>Bize Ulaşın</a>
         </nav>
 
-        <div class="mo-actions">
-          <a href="tel:05302264033" class="mo-tel">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.88 1.18 2 2 0 012.86 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
-            0530 226 40 33
-          </a>
-          <a href="#iletisim" class="mo-btn" @click="menuOpen = false">Hemen Teklif Alın</a>
-        </div>
 
       </div>
     </div>
@@ -169,11 +162,6 @@ onMounted(() => {
 .mo-nav a { font-size: 22px; font-weight: 700; color: #fff; }
 .mo-nav a:hover { padding-left: 6px; }
 
-.mo-actions { display: flex; flex-direction: column; gap: 10px; }
-.mo-tel { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 15px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; color: rgba(255,255,255,0.8); font-size: 15px; font-weight: 600; text-decoration: none; }
-.mo-tel svg { width: 15px; height: 15px; color: #7de0b8; flex-shrink: 0; }
-.mo-btn { display: flex; align-items: center; justify-content: center; padding: 16px; background: #177a5e; border-radius: 12px; color: #fff; font-size: 15px; font-weight: 700; text-decoration: none; }
-.mo-btn:hover { background: #1e9470; }
 
 @media (max-width: 900px) {
   .container { padding: 0 24px; height: 90px; gap: 0; justify-content: space-between; }
