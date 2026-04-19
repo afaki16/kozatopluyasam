@@ -164,6 +164,7 @@ p {
   font-size: 13px;
   color: #777;
   line-height: 1.65;
+  font-weight: 500;
 }
 
 @media (max-width: 900px) {
