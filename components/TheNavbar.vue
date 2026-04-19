@@ -165,6 +165,11 @@ onMounted(() => {
 .mo-logo { height: 50px; width: auto; }
 .mo-x { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; cursor: pointer; color: #fff; flex-shrink: 0; }
 .mo-x svg { width: 18px; height: 18px; }
+.mo-x {
+  position: relative;
+  z-index: 10001;
+  pointer-events: auto;
+}
 
 .mo-nav { display: flex; flex-direction: column; margin-bottom: 32px; }
 .mo-nav a { display: flex; align-items: center; gap: 16px; padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.06); text-decoration: none; }
