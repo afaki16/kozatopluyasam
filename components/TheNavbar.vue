@@ -7,10 +7,10 @@
       </a>
 
       <ul class="nav-links">
-        <li><a href="#hizmetler">Hizmetlerimiz</a></li>
-        <li><a href="#neden-biz">Neden Koza?</a></li>
-        <li><a href="#dahil">Paket İçeriği</a></li>
-        <li><a href="#iletisim">Bize Ulaşın</a></li>
+        <li><a href="#neden-biz" @click.prevent="goToSection('neden-biz')">Neden Koza?</a></li>
+        <li><a href="#hizmetler" @click.prevent="goToSection('hizmetler')">Hizmetlerimiz</a></li>
+        <li><a href="#dahil" @click.prevent="goToSection('dahil')">Paket İçeriği</a></li>
+        <li><a href="#iletisim" @click.prevent="goToSection('iletisim')">Bize Ulaşın</a></li>
       </ul>
 
       <div class="nav-right">
@@ -41,10 +41,10 @@
         </div>
 
         <nav class="mo-nav">
-          <a href="#hizmetler" @click="close"><span>01</span>Hizmetlerimiz</a>
-          <a href="#neden-biz"  @click="close"><span>02</span>Neden Koza?</a>
-          <a href="#dahil"      @click="close"><span>03</span>Paket İçeriği</a>
-          <a href="#iletisim"   @click="close"><span>04</span>Bize Ulaşın</a>
+          <a href="#hizmetler" @click.prevent="goToSection('hizmetler'); close()"><span>01</span>Hizmetlerimiz</a>
+          <a href="#neden-biz" @click.prevent="goToSection('neden-biz'); close()"><span>02</span>Neden Koza?</a>
+          <a href="#dahil" @click.prevent="goToSection('dahil'); close()"><span>03</span>Paket İçeriği</a>
+          <a href="#iletisim" @click.prevent="goToSection('iletisim'); close()"><span>04</span>Bize Ulaşın</a>
         </nav>
 
       </div>
@@ -59,11 +59,31 @@ const menuOpen = ref(false)
 function close() {
   menuOpen.value = false
 }
+function goToSection(id) {
+  const el = document.getElementById(id)
+  if (!el) return
+
+  const navbarOffset = window.innerWidth <= 900 ? 90 : 100
+  const extraGap = 10
+  const top = el.getBoundingClientRect().top + window.pageYOffset - navbarOffset - extraGap
+
+  window.scrollTo({
+    top,
+    behavior: 'smooth'
+  })
+}
+
+const handleScroll = () => {
+  isScrolled.value = window.scrollY > 40
+}
 
 onMounted(() => {
   window.addEventListener('scroll', () => {
     isScrolled.value = window.scrollY > 40
   })
+})
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
 })
 </script>
 
