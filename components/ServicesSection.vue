@@ -206,6 +206,7 @@ h2 span { color: #177a5e; }
   line-height: 1.65;
   margin-bottom: 14px;
   flex: 1;
+  font-weight: 500;
 }
 
 /* ── TAGS ── */

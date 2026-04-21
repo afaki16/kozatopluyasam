@@ -179,11 +179,12 @@ onMounted(() => {
 
 
 @media (max-width: 900px) {
-  .container { padding: 0 24px; height: 90px; gap: 0; justify-content: space-between; }
+  .container { padding: 0 24px; height: 90px;  width: 100%; display: flex; justify-content: space-between; }
   .nav-links { display: none; }
   .nav-right { display: none; }
-  .menu-toggle { display: flex; }
+  .menu-toggle { display: flex; margin-left: auto; }
   .logo-img { height: 82px; filter: drop-shadow(0 2px 10px rgba(0,0,0,0.32)); }
   .navbar.scrolled .logo-img { height: 74px; filter: drop-shadow(0 1px 6px rgba(0,0,0,0.15)); }
+  .logo { margin-right: auto; }
 }
 </style>
