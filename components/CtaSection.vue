@@ -20,8 +20,7 @@
 
       <!-- Orta: iletişim bilgileri -->
       <div class="contacts">
-        <a href="tel:05302264033" class="contact-card">
-          <div class="cc-icon">
+        <a href="https://wa.me/905302264033?text=Merhaba%20profesyonel%20site%20yönetimi%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer" class="contact-card">          <div class="cc-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
               <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.88 1.18 2 2 0 012.86 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/>
             </svg>
@@ -29,6 +28,32 @@
           <div class="cc-text">
             <span>Telefon</span>
             <strong>0530 226 40 33</strong>
+          </div>
+        </a>
+
+        <a href="https://www.instagram.com/kozatopluyasam/" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <div class="cc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </div>
+          <div class="cc-text">
+            <span>Instagram</span>
+            <strong>Instagram'da Bizi Takip Edin</strong>
+          </div>
+        </a>
+
+        <a href="https://www.facebook.com/people/Koza-Topluyasam/pfbid0qfyAnnYk6KJ4ZN4n7Mh36GmoqUHTutv1FXcTf7agdgx1wmppfq3mSbVUw3jncuAnl/?mibextid=wwXIfr&rdid=ygNeOaQinLGJlIdw&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1aVrpPNkRJ%2F%3Fmibextid%3DwwXIfr" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <div class="cc-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M22 12.06C22 6.48 17.52 2 11.94 2S2 6.48 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.84c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.23.19 2.23.19v2.45h-1.26c-1.24 0-1.63.77-1.63 1.56v1.9h2.78l-.44 2.91h-2.34V22C18.34 21.24 22 17.08 22 12.06z"/>
+            </svg>
+          </div>
+          <div class="cc-text">
+            <span>Facebook</span>
+            <strong>Facebook'ta Bizi Takip Edin</strong>
           </div>
         </a>
 
@@ -100,7 +125,7 @@
 .container {
   position: relative;
   z-index: 1;
-  max-width: 860px;
+  max-width: 1240px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -160,7 +185,7 @@ h2 em {
 /* İLETİŞİM KARTLARI */
 .contacts {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 14px;
   width: 100%;
 }
@@ -248,7 +273,7 @@ a.contact-card:hover {
 .btn-secondary:hover { background: rgba(255,255,255,0.13); color: #fff; transform: translateY(-2px); }
 
 @media (max-width: 720px) {
-  .contacts { grid-template-columns: 1fr; }
+ .contacts { grid-template-columns: 1fr; }
   h2 { font-size: 28px; }
   .actions { flex-direction: column; width: 100%; }
   .btn-primary, .btn-secondary { justify-content: center; }
