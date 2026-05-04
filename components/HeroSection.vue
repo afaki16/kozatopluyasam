@@ -43,7 +43,7 @@ const slides = [
   {
     tag: "Bursa'nın Güvenilir Adresi",
     title: 'Yaşam alanınızı<br><em>profesyonelce</em><br>yönetiyoruz.',
-    desc: '15 yılı aşkın deneyimimizle Bursa\'da site ve bina yönetiminde standartları belirliyoruz.',
+    desc: 'Bursa’da site ve bina yönetiminde edindiğimiz köklü tecrübe ile kalite ve güvenin standartlarını belirliyoruz.',
     img: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80',
   },
   {

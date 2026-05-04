@@ -4,7 +4,7 @@ export const slides = [
     titleTop: 'Yaşam alanınızı',
     titleEm: 'profesyonelce',
     titleBottom: 'yönetiyoruz.',
-    desc: "15 yılı aşkın deneyimimizle Bursa'da site ve bina yönetiminde standartları belirliyoruz.",
+    desc: "Bursa’da site ve bina yönetiminde edindiğimiz köklü tecrübe ile kalite ve güvenin standartlarını belirliyoruz.",
     primaryText: 'Hizmetleri Keşfet',
     primaryHref: '#hizmetler',
     secondaryText: 'Hakkımızda',
