@@ -25,7 +25,7 @@
         </div>
         <div class="link-col">
           <h4>İletişim</h4>
-          <a href="tel:05302264033">0530 226 40 33</a>
+          <a href="https://wa.me/905302264033?text=Merhaba%20profesyonel%20site%20yönetimi%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer" class="contact-card">0530 226 40 33</a>
           <a href="mailto:info@kozatopluyasam.com.tr">info@kozatopluyasam.com.tr</a>
           <a href="https://www.kozatopluyasam.com.tr" target="_blank">kozatopluyasam.com.tr</a>
           <span class="loc">Bursa / Türkiye</span>

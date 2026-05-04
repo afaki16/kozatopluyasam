@@ -15,7 +15,7 @@
 
       <div class="nav-right">
         <a href="#iletisim" class="btn-cta">Hemen Teklif Alın</a>
-        <a href="tel:05302264033" class="phone-link">
+        <a href="https://wa.me/905302264033?text=Merhaba%20profesyonel%20site%20yönetimi%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer" class="phone-link">
           0530 226 40 33
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
         </a>
