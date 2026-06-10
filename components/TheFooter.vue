@@ -25,9 +25,17 @@
         </div>
         <div class="link-col">
           <h4>İletişim</h4>
-          <a href="https://wa.me/905302264033?text=Merhaba%20profesyonel%20site%20yönetimi%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer" class="contact-card">0530 226 40 33</a>
-          <a href="mailto:info@kozatopluyasam.com.tr">info@kozatopluyasam.com.tr</a>
-          <a href="https://www.kozatopluyasam.com" target="_blank">kozatopluyasam.com</a>
+          <a
+            href="https://wa.me/905302264033?text=Merhaba%20profesyonel%20site%20yönetimi%20hakkında%20bilgi%20almak%20istiyorum."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-card"
+            >0530 226 40 33</a
+          >
+          <a href="mailto:kozatopluyasam@gmail.com">kozatopluyasam@gmail.com</a>
+          <a href="https://www.kozatopluyasam.com" target="_blank"
+            >kozatopluyasam.com</a
+          >
           <span class="loc">Bursa / Türkiye</span>
         </div>
       </div>
@@ -43,7 +51,7 @@
 </template>
 
 <script setup>
-const year = new Date().getFullYear()
+const year = new Date().getFullYear();
 </script>
 
 <style scoped>
@@ -98,7 +106,9 @@ const year = new Date().getFullYear()
   margin-bottom: 9px;
   transition: color 0.15s;
 }
-.link-col a:hover { color: #7de0b8; }
+.link-col a:hover {
+  color: #7de0b8;
+}
 .bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -114,13 +124,22 @@ const year = new Date().getFullYear()
   color: rgba(255, 255, 255, 0.45);
   text-decoration: none;
 }
-.bottom-inner a:hover { color: #7de0b8; }
+.bottom-inner a:hover {
+  color: #7de0b8;
+}
 
 @media (max-width: 900px) {
-  .container { grid-template-columns: 1fr; gap: 32px; }
-  .links-group { grid-template-columns: repeat(2, 1fr); }
+  .container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .links-group {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media (max-width: 480px) {
-  .links-group { grid-template-columns: 1fr; }
+  .links-group {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
