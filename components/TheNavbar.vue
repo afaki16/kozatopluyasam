@@ -27,6 +27,7 @@
     </div>
   </nav>
 
+  <ClientOnly>
   <Teleport to="body">
     <div class="mo" :class="{ open: menuOpen }" @click.self="close">
       <div class="mo-panel">
@@ -50,6 +51,7 @@
       </div>
     </div>
   </Teleport>
+  </ClientOnly>
 </template>
 
 <script setup>
