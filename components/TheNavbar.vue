@@ -21,51 +21,19 @@
         </a>
       </div>
 
-      <button class="menu-toggle" @click="menuOpen = !menuOpen" :class="{ open: menuOpen }">
-        <span /><span /><span />
-      </button>
     </div>
   </nav>
-
-  <ClientOnly>
-  <Teleport to="body">
-    <div class="mo" :class="{ open: menuOpen }" @click.self="close">
-      <div class="mo-panel">
-
-        <div class="mo-head">
-          <img src="/logo.png" class="mo-logo" alt="" />
-          <button type="button" class="mo-x" @click="close">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
-            </svg>
-          </button>
-        </div>
-
-        <nav class="mo-nav">
-          <a href="#hizmetler" @click.prevent="goToSection('hizmetler'); close()"><span>01</span>Hizmetlerimiz</a>
-          <a href="#neden-biz" @click.prevent="goToSection('neden-biz'); close()"><span>02</span>Neden Koza?</a>
-          <a href="#dahil" @click.prevent="goToSection('dahil'); close()"><span>03</span>Paket İçeriği</a>
-          <a href="#iletisim" @click.prevent="goToSection('iletisim'); close()"><span>04</span>Bize Ulaşın</a>
-        </nav>
-
-      </div>
-    </div>
-  </Teleport>
-  </ClientOnly>
 </template>
 
 <script setup>
 const isScrolled = ref(false)
-const menuOpen = ref(false)
 
-function close() {
-  menuOpen.value = false
-}
 function goToSection(id) {
   const el = document.getElementById(id)
   if (!el) return
 
-  const navbarOffset = window.innerWidth <= 900 ? 90 : 100
+  const nav = document.querySelector('.navbar')
+  const navbarOffset = nav ? nav.offsetHeight : 100
   const extraGap = 10
   const top = el.getBoundingClientRect().top + window.pageYOffset - navbarOffset - extraGap
 
@@ -80,9 +48,8 @@ const handleScroll = () => {
 }
 
 onMounted(() => {
-  window.addEventListener('scroll', () => {
-    isScrolled.value = window.scrollY > 40
-  })
+  handleScroll()
+  window.addEventListener('scroll', handleScroll, { passive: true })
 })
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
@@ -138,75 +105,40 @@ onUnmounted(() => {
 .navbar.scrolled .phone-link { color: #333; }
 .navbar.scrolled .phone-link:hover { color: #177a5e; }
 
-/* hamburger */
-.menu-toggle { display: none; flex-direction: column; justify-content: center; align-items: center; gap: 5px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); border-radius: 10px; cursor: pointer; width: 44px; height: 44px; flex-shrink: 0; padding: 0; transition: background 0.2s; }
-.navbar.scrolled .menu-toggle { background: #eaf5f1; border-color: #c8e8da; }
-.menu-toggle span { display: block; height: 2px; border-radius: 2px; background: #fff; transition: transform 0.3s, opacity 0.2s, background 0.35s; }
-.menu-toggle span:nth-child(1) { width: 18px; }
-.menu-toggle span:nth-child(2) { width: 12px; }
-.menu-toggle span:nth-child(3) { width: 18px; }
-.navbar.scrolled .menu-toggle span { background: #177a5e; }
-.menu-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.menu-toggle.open span:nth-child(2) { opacity: 0; }
-.menu-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-/* ── MOBİL OVERLAY ── */
-.mo {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  background: rgba(0,0,0,0.5);
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-.mo.open {
-  pointer-events: auto;
-  opacity: 1;
-}
-.mo-panel {
-  position: absolute;
-  top: 0; right: 0; bottom: 0;
-  width: 100%;
-  background: #061811;
-  padding: 24px 28px 40px;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-}
-
-.mo-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-bottom: 24px;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-  margin-bottom: 8px;
-}
-.mo-logo { height: 50px; width: auto; }
-.mo-x { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; cursor: pointer; color: #fff; flex-shrink: 0; }
-.mo-x svg { width: 18px; height: 18px; }
-.mo-x {
-  position: relative;
-  z-index: 10001;
-  pointer-events: auto;
-}
-
-.mo-nav { display: flex; flex-direction: column; margin-bottom: 32px; }
-.mo-nav a { display: flex; align-items: center; gap: 16px; padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.06); text-decoration: none; }
-.mo-nav a span { font-size: 11px; font-weight: 700; color: #7de0b8; letter-spacing: 1px; min-width: 24px; }
-.mo-nav a { font-size: 22px; font-weight: 700; color: #fff; }
-.mo-nav a:hover { padding-left: 6px; }
-
-
 @media (max-width: 900px) {
-  .container { padding: 0 24px; height: 90px;  width: 100%; display: flex; justify-content: space-between; }
-  .nav-links { display: none; }
-  .nav-right { display: none; }
-  .menu-toggle { display: flex; margin-left: auto; }
-  .logo-img { height: 82px; filter: drop-shadow(0 2px 10px rgba(0,0,0,0.32)); }
-  .navbar.scrolled .logo-img { height: 74px; filter: drop-shadow(0 1px 6px rgba(0,0,0,0.15)); }
-  .logo { margin-right: auto; }
+  .container {
+    padding: 10px 16px 0;
+    height: auto;
+    flex-wrap: wrap;
+    gap: 0;
+    justify-content: space-between;
+  }
+  .logo { order: 1; }
+  .logo-img { height: 64px; filter: drop-shadow(0 2px 10px rgba(0,0,0,0.32)); }
+  .navbar.scrolled .logo-img { height: 56px; filter: drop-shadow(0 1px 6px rgba(0,0,0,0.15)); }
+
+  .nav-right { order: 2; gap: 12px; }
+  .phone-link { display: none; }
+  .btn-cta { padding: 8px 14px; font-size: 12px; }
+
+  /* linkler logonun altında, sabit ve yatay kaydırılabilir */
+  .nav-links {
+    order: 3;
+    flex: 0 0 100%;
+    gap: 2px;
+    margin: 6px -16px 0;
+    padding: 0 12px 8px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    justify-content: space-between;
+  }
+  .nav-links::-webkit-scrollbar { display: none; }
+  .nav-links li { flex-shrink: 0; }
+  .nav-links a { display: block; font-size: 13px; padding: 7px 10px; white-space: nowrap; }
+}
+
+@media (max-width: 380px) {
+  .nav-links a { font-size: 12px; padding: 7px 8px; }
 }
 </style>
