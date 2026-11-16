@@ -14,6 +14,10 @@
       </ul>
 
       <div class="nav-right">
+        <a href="tel:+905302264033" class="call-link" aria-label="0530 226 40 33 numarasını ara">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>0530 226 40 33</span>
+        </a>
         <a href="#iletisim" class="btn-cta">Hemen Teklif Alın</a>
         <a href="https://wa.me/905302264033?text=Merhaba%20profesyonel%20site%20yönetimi%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer" class="phone-link">
           0530 226 40 33
@@ -105,6 +109,11 @@ onUnmounted(() => {
 .navbar.scrolled .phone-link { color: #333; }
 .navbar.scrolled .phone-link:hover { color: #177a5e; }
 
+/* mobil arama linki (masaüstünde gizli) */
+.call-link { display: none; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: #fff; text-decoration: none; white-space: nowrap; transition: color 0.35s; }
+.call-link svg { width: 16px; height: 16px; flex-shrink: 0; }
+.navbar.scrolled .call-link { color: #177a5e; }
+
 @media (max-width: 900px) {
   .container {
     padding: 10px 16px 0;
@@ -117,8 +126,9 @@ onUnmounted(() => {
   .logo-img { height: 64px; filter: drop-shadow(0 2px 10px rgba(0,0,0,0.32)); }
   .navbar.scrolled .logo-img { height: 56px; filter: drop-shadow(0 1px 6px rgba(0,0,0,0.15)); }
 
-  .nav-right { order: 2; gap: 12px; }
+  .nav-right { order: 2; gap: 10px; }
   .phone-link { display: none; }
+  .call-link { display: flex; }
   .btn-cta { padding: 8px 14px; font-size: 12px; }
 
   /* linkler logonun altında, sabit ve yatay kaydırılabilir */
@@ -140,5 +150,12 @@ onUnmounted(() => {
 
 @media (max-width: 380px) {
   .nav-links a { font-size: 12px; padding: 7px 8px; }
+  .call-link { font-size: 12px; }
+  .btn-cta { padding: 7px 10px; font-size: 11px; }
+}
+
+@media (max-width: 340px) {
+  .call-link span { display: none; }
+  .call-link svg { width: 20px; height: 20px; }
 }
 </style>
